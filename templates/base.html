@@ -21,7 +21,8 @@
 	        <li><a href="#">Ayuda</a></li>
 	        
 	      </ul>
-	      
+	      {% block perfil %}
+	      {% endblock %}
 	    </div><!-- /.navbar-collapse -->
 	  </div><!-- /.container-fluid -->
 	</nav>
@@ -40,7 +41,10 @@
 	</div>-->
 	
 	
+	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script src="{{STATIC_URL}}js/bootstrap.js"></script>
+	<script src="{{STATIC_URL}}js/bootstrap.min.js"></script>
+	<script src="{{STATIC_URL}}js/main.js"></script>
 	
-	<script src="js/bootstrap.js"></script>
 </body>
 </html>
