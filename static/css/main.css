@@ -163,3 +163,11 @@
 	padding-top: 9px;
 }
 
+#enlace, #codigo{
+	display: none;
+}
+
+.botones{
+	margin-top: 10px;
+}
+
