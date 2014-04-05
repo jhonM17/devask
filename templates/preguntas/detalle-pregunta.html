@@ -1,0 +1,106 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+	<div class="container">
+		<br>
+		<div class="row">
+			<div class="col-md-8">
+				<div class="panel panel-default">
+				  <!-- Default panel contents -->
+				  <div class="panel-heading"><h4>django tutorials - add polls on the site</h4> </div>
+				  <div class="panel-body">
+				    <p>
+						I just finished the django tutorials 1-6.
+
+						I would like to make it so that one can add a poll in the index.html. I find it quite unhandy to have to do it in the admin, and I don't get why they did not add this to the tutorials. It would have been a great feature to learn about.
+
+						I have managed to get a text field up, from an tag, and when press enter the site goes blank and I have to reload to get back to the polls. And of course no new polls have been added..
+
+						Here is what I have tried so far:
+
+						python:
+
+<pre lang="python">
+cadena = "Hola"
+cadena2 = "Mundo"
+print "%s %s" % (cadena, cadena2)
+
+</pre>
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed exercitationem nisi porro similique voluptates tempora libero saepe inventore. Repellat, laboriosam explicabo sequi officia similique facilis ipsum libero at fugit doloribus.
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis, consequuntur, in, ducimus dolore dignissimos quam eos dolor voluptatem quia esse nisi similique ea natus numquam illo id officiis minus animi!
+				    </p>
+				  </div>
+
+				  <!-- List group -->
+
+				  <ul class="list-group">
+				  	<li class="list-group-item">
+				  		<h5><button type="button" class="btn btn-warning" id="btn-respuesta">Responder</button>  Respuestas <small>(3)  </small></h5>
+				  		<textarea class="form-control" rows="4" id="respuesta"></textarea>
+				  	</li>
+				    <li class="list-group-item">
+					    <ul class="media-list">
+						  <li class="media">
+						    <a class="pull-left" href="#">
+						      <img class="media-object" src="{{STATIC_URL}}img/djeancar.jpg" width="50px" height="50px">
+						    </a>
+						    <div class="media-body">
+						      <h4 class="media-heading">Media heading</h4>
+						      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis, commodi saepe quia recusandae laboriosam quisquam accusamus atque enim deleniti repellat quos ad dolorum optio corrupti fuga rerum quas assumenda distinctio.
+						      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit, dignissimos, voluptate molestiae dolores et minima soluta! Distinctio, molestias, quo, in hic sint earum qui illo pariatur optio itaque non dicta!
+						    </div>
+						  </li>
+						</ul>
+				    </li>
+				    <li class="list-group-item">
+				    	<ul class="media-list">
+						  <li class="media">
+						    <a class="pull-left" href="#">
+						      <img class="media-object" src="{{STATIC_URL}}img/edwinpgm.jpg" width="50px" height="50px">
+						    </a>
+						    <div class="media-body">
+						      <h4 class="media-heading">Media heading</h4>
+						      You can't do that in get_queryset(). The only thing to return from there is a queryset, as the name implies, not a redirect. You should probably override get().
+						    </div>
+						  </li>
+						</ul>
+				    </li>
+				    <li class="list-group-item">
+				    	<ul class="media-list">
+						  <li class="media">
+						    <a class="pull-left" href="#">
+						      <img class="media-object" src="{{STATIC_URL}}img/myraisav.jpg" width="50px" height="50px">
+						    </a>
+						    <div class="media-body">
+						      <h4 class="media-heading">Media heading</h4>
+						      You can't do that in get_queryset(). The only thing to return from there is a queryset, as the name implies, not a redirect. You should probably override get().
+						      You can't do that in get_queryset(). The only thing to return from there is a queryset, as the name implies, not a redirect. You should probably override get().
+						      You can't do that in get_queryset(). The only thing to return from there is a queryset, as the name implies, not a redirect. You should probably override get().
+						    </div>
+						  </li>
+						</ul>
+				    </li>
+				   
+				  </ul>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="list-group">
+				  <a href="#" class="list-group-item active">
+				    Top 10 Preguntas Frecuentes
+				  </a>
+				  <a href="#" class="list-group-item"><span class="glyphicon glyphicon-question-sign"></span>  ¿Cómo paso un modelo de una aplicación a una vista de otra aplicación?</a>
+				  <a href="#" class="list-group-item"><span class="glyphicon glyphicon-question-sign"></span>  ¿Porqué sale error al momento de correr el servidor, pil?</a>
+				  <a href="#" class="list-group-item"><span class="glyphicon glyphicon-question-sign"></span>  ¿Cuándo es necesario usar Vistas Basadas en Clases y cuándo es necesario usar Vistas Basadas en funciones?</a>
+				  <a href="#" class="list-group-item"><span class="glyphicon glyphicon-question-sign"></span>  ¿Cómo instalar pil en windows 8?</a>
+				  <a href="#" class="list-group-item"><span class="glyphicon glyphicon-question-sign"></span>  ¿Porqué sale error al momento de correr el servidor, pil?</a>
+				  <a href="#" class="list-group-item"><span class="glyphicon glyphicon-question-sign"></span>  ¿Porqué sale error al momento de correr el servidor, pil?</a>
+				  <a href="#" class="list-group-item"><span class="glyphicon glyphicon-question-sign"></span>  ¿Porqué sale error al momento de correr el servidor, pil?</a>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+
+{% endblock %}

@@ -6,3 +6,6 @@ class preguntas(TemplateView):
 
 class mkpregunta(TemplateView):
 	template_name = 'preguntas/hacer-pregunta.html'
+
+class detallePregunta(TemplateView):
+	template_name = 'preguntas/detalle-pregunta.html'

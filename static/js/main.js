@@ -41,4 +41,11 @@ function mostrarEnlace(e){
 	$('#cont-enlace').html('<a>'+cuadroEnlace+'</a>');
 }
 
+//////////////
+$('#btn-respuesta').on('click', mostrarRespuesta);
+
+function mostrarRespuesta(){
+	$('#respuesta').toggle();
+}
+
 
