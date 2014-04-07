@@ -6,12 +6,20 @@
 		<br>
 		<div class="row">
 			<div class="col-md-8">
-				<div class="input-group">
-				  <span class="input-group-addon">Buscar  <span class="glyphicon glyphicon-search"></span></span>
-				  <input type="text" class="form-control" placeholder="Búsqueda por tags">
-				</div>
+				<p class="tags">
+				  <span>Busqueda por Etiquetas:</span>
+				  {% for tag in tags %}
+				  <button type="button" class="btn btn-default btn-xs" id="{{tag.id}}">{{tag.nombre}}</button>
+				  {% endfor %}
+				</p>
+
+				<div class="datos">
+					
+				
+				{% for pregunta in preguntas %}
+				<div>
 				<hr>
-				<h4>¿Por qué me sale un error en la instalación Django en windows? </h4>
+				<h4>{{pregunta.nombre}} </h4>
 				<blockquote class="bloquesito">
 				  <p class="bg-info bg-info-customize">Vistos <span>0</span></p>
 				  <p class="bg-warning bg-info-customize">Respuestas <span>0</span></p>
@@ -19,105 +27,19 @@
 				  <p class="bg-success bg-fecha-customize">Publicado hace: <span>30 min</span></p>
 				  <p class="tags">
 				  	<span>Etiquetas:</span>
-				  	<button type="button" class="btn btn-default btn-xs">Django 1.5</button>
-				  	<button type="button" class="btn btn-default btn-xs">Django 1.6</button>
-				  	<button type="button" class="btn btn-default btn-xs">Node</button>
-				  </p>
-				</blockquote>
-				<hr>
 
-				<h4>¿Por qué me sale Error 500 en Django? </h4>
-				<blockquote class="bloquesito">
-				  <p class="bg-info bg-info-customize">Vistos <span>0</span></p>
-				  <p class="bg-warning bg-info-customize">Respuestas <span>0</span></p>
-				  <p class="bg-success bg-info-customize">Votos <span>0</span></p>
-				  <p class="bg-success bg-fecha-customize">Publicado hace: <span>3 hr</span></p>
-				  <p class="tags">
-				  	<span>Etiquetas:</span> 
-				  	<button type="button" class="btn btn-default btn-xs">Node</button>
-				  	<button type="button" class="btn btn-default btn-xs">Django 1.6</button>
+				  	{% for tag in pregunta.tag.all %}
+				  	<button type="button" class="btn btn-default btn-xs">{{tag.nombre}}</button>
+				  	{% endfor %}
+		
 				  </p>
+				  </div>
 				</blockquote>
-				<hr>
+				{% endfor %}
 
-				<h4>¿Qué es mejor Vistas basadas en clases o vistas basadas en funciones? </h4>
-				<blockquote class="bloquesito">
-				  <p class="bg-info bg-info-customize">Vistos <span>0</span></p>
-				  <p class="bg-warning bg-info-customize">Respuestas <span>0</span></p>
-				  <p class="bg-success bg-info-customize">Votos <span>0</span></p>
-				  <p class="bg-success bg-fecha-customize">Publicado hace: <span>4 hr</span></p>
-				  <p class="tags">
-				  	<span>Etiquetas:</span>
-				  	<button type="button" class="btn btn-default btn-xs">VBC</button>
-				  	<button type="button" class="btn btn-default btn-xs">VBF</button>
-				  </p>
-				</blockquote>
-				<hr>
+				</div>
 
-				<h4>¿Cómo usar multisettings de django en un proyecto? </h4>
-				<blockquote class="bloquesito">
-				  <p class="bg-info bg-info-customize">Vistos <span>0</span></p>
-				  <p class="bg-warning bg-info-customize">Respuestas <span>0</span></p>
-				  <p class="bg-success bg-info-customize">Votos <span>0</span></p>
-				  <p class="bg-success bg-fecha-customize">Publicado hace: <span>15 hr</span></p>
-				  <p class="tags">
-				  	<span>Etiquetas:</span>
-				  	<button type="button" class="btn btn-default btn-xs">Django 1.6</button>
-				  </p>
-				</blockquote>
-                <hr>
-
-				<h4>¿Cómo usar multisettings de django en un proyecto? </h4>
-				<blockquote class="bloquesito">
-				  <p class="bg-info bg-info-customize">Vistos <span>0</span></p>
-				  <p class="bg-warning bg-info-customize">Respuestas <span>0</span></p>
-				  <p class="bg-success bg-info-customize">Votos <span>0</span></p>
-				  <p class="bg-success bg-fecha-customize">Publicado hace: <span>15 hr</span></p>
-				  <p class="tags">
-				  	<span>Etiquetas:</span>
-				  	<button type="button" class="btn btn-default btn-xs">Django 1.6</button>
-				  </p>
-				</blockquote>
-				<hr>
-
-				<h4>¿Cómo usar multisettings de django en un proyecto? </h4>
-				<blockquote class="bloquesito">
-				  <p class="bg-info bg-info-customize">Vistos <span>0</span></p>
-				  <p class="bg-warning bg-info-customize">Respuestas <span>0</span></p>
-				  <p class="bg-success bg-info-customize">Votos <span>0</span></p>
-				  <p class="bg-success bg-fecha-customize">Publicado hace: <span>15 hr</span></p>
-				  <p class="tags">
-				  	<span>Etiquetas:</span>
-				  	<button type="button" class="btn btn-default btn-xs">Django 1.6</button>
-				  </p>
-				</blockquote>
-				<hr>
-
-				<h4>¿Cómo usar multisettings de django en un proyecto? </h4>
-				<blockquote class="bloquesito">
-				  <p class="bg-info bg-info-customize">Vistos <span>0</span></p>
-				  <p class="bg-warning bg-info-customize">Respuestas <span>0</span></p>
-				  <p class="bg-success bg-info-customize">Votos <span>0</span></p>
-				  <p class="bg-success bg-fecha-customize">Publicado hace: <span>15 hr</span></p>
-				  <p class="tags">
-				  	<span>Etiquetas:</span>
-				  	<button type="button" class="btn btn-default btn-xs">Django 1.6</button>
-				  </p>
-				</blockquote>
-				<hr>
-
-				<h4>¿Cómo usar multisettings de django en un proyecto? </h4>
-				<blockquote class="bloquesito">
-				  <p class="bg-info bg-info-customize">Vistos <span>0</span></p>
-				  <p class="bg-warning bg-info-customize">Respuestas <span>0</span></p>
-				  <p class="bg-success bg-info-customize">Votos <span>0</span></p>
-				  <p class="bg-success bg-fecha-customize">Publicado hace: <span>15 hr</span></p>
-				  <p class="tags">
-				  	<span>Etiquetas:</span>
-				  	<button type="button" class="btn btn-default btn-xs">Django 1.6</button>
-				  </p>
-				</blockquote>
-				<hr>
+				
 
 			</div>
 			<div class="col-md-4">
@@ -137,4 +59,38 @@
 			</div>
 		</div>
 	</div>
+{% endblock %}
+
+{% block js %}
+	<script>
+		$('.btn-xs').on('click', inicio);
+
+		function inicio(){
+			var id = $(this).attr('id');
+			$.ajax({
+				data: {'id': id},
+				url: '/preguntas/busqueda_ajax/',
+				type: 'get',
+				success: function(data){
+					console.log(data);
+					var html = "";
+					for(var i=0; i<data.length; i++){
+						html+='<div><hr><h4>'+data[i].fields.nombre+' </h4><blockquote class="bloquesito"><p class="bg-info bg-info-customize">Vistos <span>0</span></p><p class="bg-warning bg-info-customize">Respuestas <span>0</span></p><p class="bg-success bg-info-customize">Votos <span>0</span></p><p class="bg-success bg-fecha-customize">Publicado hace: <span>30 min</span></p><p class="tags"><span>Etiquetas:</span>';
+
+							for(var j=0; j<data[i].fields.tag.length; j++){
+								html+='<button type="button" class="btn btn-default btn-xs">'+data[i].fields.tag[j]+'</button>  ';
+							}
+
+							html+='</p></blockquote></div>';
+
+							//for(var j=0; j<data.len)
+						//{% for tag in pregunta.tag.all %}<button type="button" class="btn btn-default btn-xs">{{tag.nombre}}</button>{% endfor %}</p></blockquote>';
+
+					}
+
+					$('.datos').html(html);
+				}
+			});
+		}
+	</script>	
 {% endblock %}
