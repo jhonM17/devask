@@ -174,3 +174,8 @@
 #respuesta{
 	display: none;
 }
+
+.media-object{
+	margin-right: auto;
+	margin-left: auto;
+}
